@@ -70,6 +70,14 @@ public Empleados(int empleadoid, String nombre, String apellido, String cedula, 
 	}
 
 
+public int getEmpleado() {
+	return empleado;
+}
+
+
+public void setEmpleado(int empleado) {
+	this.empleadoid = empleado;
+}
 public int getEmpleadoid() {
 	return empleadoid;
 }

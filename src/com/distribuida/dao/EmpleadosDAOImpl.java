@@ -14,11 +14,6 @@ import com.distribuida.entities.Empleados;
 
 public class EmpleadosDAOImpl implements EmpleadosDAO {
 	
-
-	//SELECT *FROM Factura --->>SQL
-	//from Factura  --->>HQL
-	//SELECT cl.* FROM Factura AS cl --->>> SQL
-	//SELECT CL FROM Factura cl  ----HQL
 	@Autowired
 	private SessionFactory sessionFactory;
 	@Override

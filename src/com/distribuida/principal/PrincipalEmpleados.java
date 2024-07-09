@@ -6,22 +6,18 @@ import java.util.Date;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.distribuida.dao.EmpleadosDAO;
-import com.distribuida.dao.EmpleadosDAO;
+
 import com.distribuida.entities.Empleados;
 
 public class PrincipalEmpleados {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		//Patron de Ioc o Inversion de control
+		
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext ("ApplicationContext.xml");//esete es el contenedor
 		EmpleadosDAO empleadosDAO = context.getBean("empleadosDAOImpl",EmpleadosDAO.class);//este en minuscula si no no funciona
 		//CRUD CREEATE READ UPDATE Y DELETE
-		EmpleadosDAO empleadosDAO=context.getBean("empleadosDAOImpl",empleadosDAO.class);
-		//add
-		Empleados empleados = new Empleados ();
-		empleados.setEmpleados(empleadosDAO.findOne(2));
+		//add agregado
+		Empleados empleados = new Empleados (0,"daniel","pajuna","1724185408","da@gmail,com","2333144","masc","no","sol");
 		empleadosDAO.add(empleados);
 		
 		
